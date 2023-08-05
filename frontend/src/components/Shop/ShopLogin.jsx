@@ -17,7 +17,7 @@ const ShopLogin = () => {
 
     await axios
       .post(
-        `http://192.168.0.230:8000/shop/login-shop`,
+        `${server}/shop/login-shop`,
         {
           email,
           password,
