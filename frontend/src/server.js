@@ -1,3 +1,3 @@
-export const server = 'https://test-ecom-owgl.onrender.com';
+export const server = 'http://localhost:8000/api/v2/';
 
 

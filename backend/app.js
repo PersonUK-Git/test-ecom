@@ -4,6 +4,7 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const dotenv = require('dotenv')
 
 
 
@@ -15,13 +16,7 @@ app.use("/test", (req, res) => {
 });
 
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
-
-// config
-if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config({
-    path: "config/.env",
-  });
-}
+dotenv.config();
 
 // import routes
 const user = require("./controller/user");
